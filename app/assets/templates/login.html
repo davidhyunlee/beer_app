@@ -1,0 +1,10 @@
+<form name="loginForm" ng-submit="auth.login()" novalidate>
+  <!-- Email -->
+  <input type="email" ng-model="auth.email" name="email" placeholder="Email" ng-pattern="/\b\w+@\w+\.\w+/" required />
+
+  <!-- Password -->
+  <input type="password" name="password" ng-model="auth.password" placeholder="Password" required />
+
+  <!-- Login -->
+  <button type="submit" ng-disabled="loginForm.$invalid">Log in</button>
+</form>

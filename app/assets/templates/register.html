@@ -1,0 +1,15 @@
+<form name="registerForm" ng-submit="users.signup()" novalidate>
+
+  <!-- Name Field -->
+  <input type="text" name="name" ng-model="users.name" placeholder="Full name" required />
+
+  <!-- Email field -->
+  <input type="email" name="email" ng-model="users.email" ng-pattern="/\b\w+@\w+\.\w+/" placeholder="Email" required>
+
+  <!-- Password field -->
+  <input type="password" ng-model="users.password" name="password" placeholder="Password" required />
+
+  <!-- Submit button -->
+  <button type="submit" ng-disabled="registerForm.$invalid">Create my account</button>
+
+</form>
